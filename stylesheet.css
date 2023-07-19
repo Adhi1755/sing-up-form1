@@ -1,0 +1,214 @@
+*{
+    font-family: 'Khula', sans-serif;
+}
+.background {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav {
+    /* background-color:white; */
+    color: white;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.tag {
+    text-decoration: none;
+    margin-left: 70px;
+    color: white;
+    position: relative;  
+}
+.nav .tag::after{
+    content:"";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    border-radius: 2px;
+    transform: translateY(5px);
+    transition-duration: 0.2s;
+    opacity: 0;
+    transition-delay: 0s;
+}
+.nav a:hover:after {
+    transform: translateY(0);
+    opacity: 1;
+}
+.social-media{
+    border: transparent;
+    width: 400px;
+    height: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 100px;
+}
+.social-media a::after{
+    content:"";
+    position: fixed;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    border-radius: 2px;
+    transform: translateY(5px);
+    transition-duration: 0.2s;
+    opacity: 0;
+    transition-delay: 0s;
+}
+.social-media a:hover{
+    transform: translateY(0);
+    opacity: 1;
+}
+.sing-up{
+    width: 100px;
+    height:25px ;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 20px;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+}
+.sing-up:hover{
+    background-color: red;
+    border: 1px solid red;
+    color: black;
+}
+.containor {
+    height: 400px;
+    width: 300px;
+    background-color: black;
+    backdrop-filter: blur(3px);
+    overflow: hidden;
+    
+}
+.containor::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    background: linear-gradient(0deg,transparent,transparent,red,red,red);
+    height: 400px;
+    width: 300px;
+    z-index: -1;
+    animation: animate 6s linear infinite;
+    transform-origin: bottom right;
+}
+.containor::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    background: linear-gradient(0deg,transparent,transparent,red,red,red);
+    height: 400px;
+    width: 300px;
+    z-index:-1;
+    animation: animate 6s linear infinite;
+    transform-origin: bottom right;
+    animation-delay: -3s;
+
+}
+@keyframes animate {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.main {
+    position: absolute;
+    inset: 2px;
+    background-color:black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+.main h1 {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right:100px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.form input{
+    height: 30px;
+    margin: 20px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 20px;
+    color: white;
+
+}
+.form input:focus{
+    border: 1px solid red;
+}
+.rf{
+    font-size: 0.7rem;
+    text-decoration: none;
+    position: absolute;
+    bottom: 10px;
+    right:10px;
+}
+.rf a {
+      text-decoration: none;
+    color: white;
+}
+.rf a:hover{
+    text-decoration: underline;
+    color: red;
+}
+.rf span{
+    cursor: pointer;
+}
+.form button {
+    width: 100px;
+    height:30px ;
+    position: absolute;
+    bottom: 70px;
+    left:90px;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 20px;
+    background-color: transparent;
+}
+.form button:hover{
+    color: black;
+    background-color: red;
+    border: 1px solid red;
+}
+.form label{
+    padding-left: 20px;
+    padding-right:20px;
+    text-transform: capitalize;
+}
+.main input::placeholder{
+    color: red;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 0.1rem;
+
+} 
